@@ -3,138 +3,138 @@
    ========================================= */
 
 :root {
-  --mil-bg: #1a1a1a;
-  --mil-sidebar: #161616;
-  --mil-text: #d4d0c8;
-  --mil-muted: #8a8680;
-  --mil-rust: #c45c4a;
-  --mil-rule: #2e2e2e;
-  --mil-bar: #6a6660;
+  --mil-bg: #1c1c1c;
+  --mil-sidebar: #141414;
+  --mil-text: #d6d2ca;
+  --mil-muted: #7d7973;
+  --mil-rust: #b85a48;
+  --mil-rule: #2a2a2a;
+  --mil-bar: #5f5b56;
 }
 
 .mil-fiche.mil-dossier {
   background: var(--mil-bg);
-  border: 1px solid #2a2a2a;
+  border: 1px solid #2c2c2c;
   color: var(--mil-text);
   font-family: "Arial Narrow", "Liberation Sans Narrow", Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 12.5px;
+  line-height: 1.4;
   position: relative;
-  max-width: 760px;
-  margin: 0 auto;
+  max-width: 720px;
+  margin: 12px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,.4);
 }
 
-/* Accent rouge en haut à gauche */
+/* Accent / onglet dossier */
 .mil-accent {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 48px;
-  height: 6px;
-  background: #b84a3a;
+  top: -1px;
+  left: 18px;
+  width: 52px;
+  height: 7px;
+  background: #a84a3a;
+  border-radius: 0 0 2px 2px;
+  z-index: 2;
 }
 
-/* Corps en deux colonnes */
+/* Corps */
 .mil-body {
   display: grid;
-  grid-template-columns: 130px 1fr;
-  min-height: 480px;
+  grid-template-columns: 118px 1fr;
+  min-height: 460px;
 }
 
-/* Colonne gauche */
+/* Sidebar */
 .mil-sidebar {
   background: var(--mil-sidebar);
-  padding: 22px 14px 18px 16px;
+  padding: 26px 12px 16px 14px;
   border-right: 1px solid #222;
 }
-.mil-meta-item {
-  margin-bottom: 14px;
-}
+.mil-meta-item { margin-bottom: 12px; }
 .mil-meta-label {
   display: block;
-  font-size: 9px;
-  letter-spacing: 1.2px;
+  font-size: 8.5px;
+  letter-spacing: 1.1px;
   color: var(--mil-muted);
   text-transform: uppercase;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 .mil-meta-value {
-  font-size: 13px;
+  font-size: 12.5px;
   color: #eee;
   font-weight: 500;
+  letter-spacing: .3px;
 }
 .mil-status {
   color: var(--mil-rust);
-  font-weight: bold;
-  font-size: 11px;
-  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: .6px;
   text-transform: uppercase;
+  line-height: 1.3;
 }
 .mil-bar {
   display: block;
-  height: 8px;
+  height: 7px;
   background: var(--mil-bar);
-  margin-top: 4px;
+  margin-top: 3px;
 }
-.mil-bar-short { width: 42px; }
-.mil-bar-date { width: 56px; }
+.mil-bar-short { width: 38px; }
+.mil-bar-date { width: 50px; }
 .mil-redactions {
-  margin-top: 20px;
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
-.mil-redactions .mil-bar:nth-child(1) { width: 85%; }
-.mil-redactions .mil-bar:nth-child(2) { width: 60%; }
-.mil-redactions .mil-bar:nth-child(3) { width: 95%; }
-.mil-redactions .mil-bar:nth-child(4) { width: 32%; }
+.mil-redactions .mil-bar:nth-child(1) { width: 82%; }
+.mil-redactions .mil-bar:nth-child(2) { width: 55%; }
+.mil-redactions .mil-bar:nth-child(3) { width: 92%; }
+.mil-redactions .mil-bar:nth-child(4) { width: 28%; }
 
-/* Contenu principal */
+/* Contenu */
 .mil-content {
-  padding: 16px 20px 20px;
+  padding: 18px 18px 18px 20px;
   position: relative;
 }
 .mil-confidential {
   position: absolute;
-  top: 12px;
-  right: 16px;
+  top: 10px;
+  right: 14px;
   border: 1px solid var(--mil-rust);
   color: var(--mil-rust);
-  font-size: 9px;
-  letter-spacing: 1.5px;
-  padding: 2px 8px;
+  font-size: 8.5px;
+  letter-spacing: 1.4px;
+  padding: 1px 7px;
   text-transform: uppercase;
 }
-.mil-fields {
-  margin-top: 28px;
-}
+.mil-fields { margin-top: 24px; }
 .mil-field {
-  padding: 10px 0 11px;
+  padding: 8px 0 9px;
   border-bottom: 1px solid var(--mil-rule);
 }
-.mil-field:first-child { padding-top: 4px; }
+.mil-field:first-child { padding-top: 2px; }
 .mil-label {
   color: var(--mil-rust);
-  font-size: 10px;
-  letter-spacing: 1.4px;
+  font-size: 9.5px;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 .mil-mini-bar {
   display: inline-block;
-  width: 28px;
-  height: 6px;
+  width: 24px;
+  height: 5px;
   background: var(--mil-bar);
-  vertical-align: middle;
 }
 .mil-value {
   color: var(--mil-text);
-  font-size: 13.5px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.45;
 }
 
-/* Cache les <br> parasites que Forumactif peut injecter */
-.mil-fiche.mil-dossier br { display: none; }
+/* Cache les <br> parasites */
+.mil-fiche.mil-dossier br { display: none !important; }
