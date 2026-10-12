@@ -37,7 +37,7 @@
 
 /* Barre du haut : nom du fichier (gauche) */
 .mil-fiche.mil-dossier::before {
-  content: "▪ ARCHIVES / PERSONNEL / DOSSIER_RADIÉ.pdf";
+  content: "▪ RECORDS / NPRC / OMPF / DARROW_NEWTON_B.pdf";
   position: absolute;
   top: 9px;
   left: 12px;
@@ -55,7 +55,7 @@
   initial-value: 0;
 }
 .mil-fiche.mil-dossier::after {
-  content: "ACCÈS AUTORISÉ — LECTURE SEULE";
+  content: "CUI — PRIVACY ACT — READ ONLY";
   position: absolute;
   top: 1px;
   right: 12px;
@@ -184,7 +184,7 @@
 }
 /* Pied de page de la page */
 .mil-content::after {
-  content: "RÉF. N-000-000  ·  DIFFUSION RESTREINTE  ·  PAGE 01/01";
+  content: "SSN XXX-XX-XXXX  ·  CUI  ·  PAGE 1 OF 1";
   position: absolute;
   left: 12px;
   right: 20px;
