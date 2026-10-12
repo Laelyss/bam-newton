@@ -1,0 +1,117 @@
+/* =========================================
+   FICHE MILITAIRE - NEWTON
+   ========================================= */
+
+/* --- Conteneur principal --- */
+.mil-fiche {
+  background: #0d0d0d;
+  border: 1px solid #2a2a2a;
+  padding: 18px 20px;
+  color: #c8c8c8;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  line-height: 1.45;
+  position: relative;
+}
+
+/* --- En-tête CONFIDENTIEL --- */
+.mil-header {
+  text-align: center;
+  color: #c45c5c;
+  border: 1px solid #c45c5c;
+  display: inline-block;
+  padding: 3px 16px;
+  margin: 0 auto 14px;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* --- Ligne meta (matricule / affectation / statut) --- */
+.mil-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+.mil-meta-item {
+  flex: 1;
+  text-align: center;
+}
+.mil-meta-label {
+  display: block;
+  font-size: 10px;
+  color: #888;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.mil-meta-value {
+  font-size: 13px;
+  color: #ddd;
+}
+.mil-status {
+  color: #c45c5c;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.mil-bar {
+  display: inline-block;
+  width: 80px;
+  height: 12px;
+  background: #444;
+  vertical-align: middle;
+}
+
+/* --- Champs d'identité --- */
+.mil-field {
+  margin-bottom: 12px;
+}
+.mil-label {
+  color: #a0a0a0;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+.mil-value {
+  color: #d0d0d0;
+  padding-bottom: 4px;
+  border-bottom: 1px dotted #444;
+  min-height: 18px;
+}
+
+/* Version inline (label + valeur sur la même ligne) */
+.mil-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.mil-inline .mil-label {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+.mil-inline .mil-value {
+  flex: 1;
+  text-align: right;
+  border-bottom: 1px dotted #444;
+}
+
+/* --- Pied de fiche --- */
+.mil-footer {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 1px;
+}
+.mil-ref-box {
+  display: inline-block;
+  width: 50px;
+  height: 14px;
+  background: #555;
+  vertical-align: middle;
+  margin: 0 4px;
+}
