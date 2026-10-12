@@ -22,7 +22,6 @@
 .mil-fiche.mil-dossier {
   position: relative;
   max-width: 700px;
-  margin: 24px auto 16px;
   padding: 30px 10px 26px;
   background: var(--mil-viewer);
   border: 1px solid #2a2927;
@@ -37,7 +36,7 @@
 
 /* Barre du haut : nom du fichier (gauche) */
 .mil-fiche.mil-dossier::before {
-  content: "▪ RECORDS / NPRC / OMPF / DARROW_NEWTON_B.pdf";
+  content: "▪ RECORDS / NPRC / OMPF / D_N_B.pdf";
   position: absolute;
   top: 9px;
   left: 12px;
