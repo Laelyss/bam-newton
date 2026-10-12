@@ -2,125 +2,143 @@
    FICHE MILITAIRE - NEWTON
    ========================================= */
 
-.mil-fiche.mil-dossier {
-  --mil-paper: #1e1e1d;
-  --mil-rule: #42413d;
-  --mil-rust: #b9654f;
-  --mil-text: #e4e0d9;
-  --mil-muted: #a8a49c;
-  --mil-sidebar: 118px;
-  position: relative;
-  isolation: isolate;
-  container-type: inline-size;
-  container-name: newton-dossier;
+  font-family: "Arial Narrow", "Liberation Sans Narrow", Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.25px;
+}
+
+.mil-fiche.mil-dossier .mil-bar {
+  display: inline-block;
+  width: 70px;
+  max-width: 100%;
+  height: 9px;
+  margin: 2px 0 0;
+  padding: 0;
+  border: 0;
+  background: #68645e;
+  vertical-align: middle;
+}
+
+.mil-fiche.mil-dossier .mil-bar-short { width: 43px; }
+.mil-fiche.mil-dossier .mil-bar-date { width: 57px; }
+
+.mil-fiche.mil-dossier .mil-redactions {
+  display: grid;
+  justify-items: start;
+  gap: 6px;
+  margin: 16px 0 0;
+}
+
+.mil-fiche.mil-dossier .mil-redactions .mil-bar { height: 7px; margin: 0; }
+.mil-fiche.mil-dossier .mil-redactions .mil-bar:nth-child(1) { width: 85%; }
+.mil-fiche.mil-dossier .mil-redactions .mil-bar:nth-child(2) { width: 59%; }
+.mil-fiche.mil-dossier .mil-redactions .mil-bar:nth-child(3) { width: 97%; }
+.mil-fiche.mil-dossier .mil-redactions .mil-bar:nth-child(4) { width: 30%; }
+
+.mil-fiche.mil-dossier .mil-fields {
   display: block;
-  box-sizing: border-box;
-  width: 100%;
   min-width: 0;
-  max-width: 720px;
-  margin: 30px auto 12px;
-  padding: 22px 22px 26px;
-  border: 1px solid #3d3b36;
-  border-radius: 5px;
-  background-color: var(--mil-paper);
-  background-image:
-    repeating-linear-gradient(17deg, transparent 0 3px, rgba(255,255,255,.012) 3px 4px, transparent 4px 7px),
-    repeating-linear-gradient(103deg, transparent 0 2px, rgba(0,0,0,.055) 2px 3px, transparent 3px 6px),
-    radial-gradient(ellipse at 18% 0, rgba(255,255,255,.025), transparent 65%);
-  box-shadow:
-    5px 4px 0 -1px #242421,
-    6px 5px 0 -1px #46433d,
-    10px 8px 0 -2px #232321,
-    11px 9px 0 -2px #383630,
-    0 10px 22px rgba(0,0,0,.2);
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--mil-rule);
+}
+
+.mil-fiche.mil-dossier .mil-field,
+.mil-fiche.mil-dossier .mil-field.mil-inline {
+  display: block;
+  margin: 0;
+  padding: 13px 0 14px;
+  border-bottom: 1px solid var(--mil-rule);
+}
+
+.mil-fiche.mil-dossier .mil-field:first-child { padding-top: 17px; }
+
+.mil-fiche.mil-dossier .mil-label,
+.mil-fiche.mil-dossier .mil-inline .mil-label {
+  display: block;
+  margin: 0 0 5px;
+  padding: 0;
+  color: var(--mil-rust);
+  font-family: "Arial Narrow", "Liberation Sans Narrow", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  white-space: normal;
+}
+
+.mil-fiche.mil-dossier .mil-value,
+.mil-fiche.mil-dossier .mil-inline .mil-value {
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
   color: var(--mil-text);
   font-family: "Arial Narrow", "Liberation Sans Narrow", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.55;
-  text-align: left;
-  text-transform: none;
   letter-spacing: normal;
-  overflow: visible;
+  text-align: left;
   overflow-wrap: anywhere;
 }
 
-.mil-fiche.mil-dossier *,
-.mil-fiche.mil-dossier *::before,
-.mil-fiche.mil-dossier *::after {
-  box-sizing: border-box;
-}
-
-/* Languette supérieure, avec une petite étiquette rouille. */
-.mil-fiche.mil-dossier::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -22px;
-  left: -1px;
-  width: min(205px, 64%);
-  height: 28px;
-  border-radius: 5px 0 0 0;
-  background:
-    linear-gradient(#a95945, #a95945) 64px 1px / 74px 12px no-repeat,
-    linear-gradient(#393731, #393731) top / 100% 1px no-repeat,
-    linear-gradient(#242422, #1e1e1d);
-  clip-path: polygon(0 0, 84% 0, 97% 79%, 100% 79%, 100% 100%, 0 100%);
-  pointer-events: none;
-}
-
-/* Bord d'une feuille derrière la couverture. */
-.mil-fiche.mil-dossier::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -5px;
-  right: 12px;
-  bottom: 4px;
-  left: 12px;
-  border-top: 1px solid #45423a;
-  border-radius: 3px;
-  transform: rotate(-.35deg);
-  pointer-events: none;
-}
-
-.mil-fiche.mil-dossier .mil-header {
-  display: table;
-  width: auto;
-  max-width: 100%;
-  margin: 0 0 22px auto;
-  padding: 3px 10px;
-  border: 1px solid #93503f;
-  background: transparent;
-  color: #c67860;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 9px;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-.mil-fiche.mil-dossier .mil-body {
-  display: grid;
-  grid-template-columns: var(--mil-sidebar) minmax(0, 1fr);
-  gap: 20px;
-  align-items: stretch;
-  margin: 0;
-  padding: 0;
-}
-
-.mil-fiche.mil-dossier .mil-meta {
+.mil-fiche.mil-dossier .mil-footer {
   display: block;
-  min-width: 0;
-  margin: 0;
-  padding: 17px 16px 0 0;
-  border-top: 1px solid var(--mil-rule);
-  border-right: 1px solid var(--mil-rule);
-  border-bottom: 0;
+  margin: 17px 0 0;
+  color: #969189;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 8px;
+  line-height: 1.5;
+  letter-spacing: .5px;
   text-align: left;
 }
 
-.mil-fiche.mil-dossier .mil-meta-item {
-  display: block;
-  margin: 0;
+.mil-fiche.mil-dossier .mil-ref-box {
+  display: inline-block;
+  width: 28px;
+  height: 7px;
+  margin: 0 2px;
+  padding: 0;
+  border: 0;
+  background: #68645e;
+  vertical-align: middle;
+}
+
+/* Retours de ligne éventuellement ajoutés entre les div par Forumactif.
+   Les sauts de ligne écrits DANS les réponses restent visibles. */
+.mil-fiche.mil-dossier > br,
+.mil-fiche.mil-dossier .mil-body > br,
+.mil-fiche.mil-dossier .mil-meta > br,
+.mil-fiche.mil-dossier .mil-meta-item > br,
+.mil-fiche.mil-dossier .mil-fields > br,
+.mil-fiche.mil-dossier .mil-field > br,
+.mil-fiche.mil-dossier .mil-redactions > br { display: none; }
+
+/* Adaptation à la largeur du bloc, même dans un message étroit sur PC. */
+@container newton-dossier (max-width: 450px) {
+  .mil-fiche.mil-dossier .mil-body { grid-template-columns: 101px minmax(0, 1fr); gap: 14px; }
+  .mil-fiche.mil-dossier .mil-meta { padding-right: 12px; }
+  .mil-fiche.mil-dossier .mil-meta-label { font-size: 8px; letter-spacing: 1px; }
+  .mil-fiche.mil-dossier .mil-status { font-size: 9px; letter-spacing: .7px; }
+  .mil-fiche.mil-dossier .mil-label { font-size: 9px; letter-spacing: 1.3px; }
+  .mil-fiche.mil-dossier .mil-value { font-size: 13px; }
+}
+
+@container newton-dossier (max-width: 340px) {
+  .mil-fiche.mil-dossier .mil-body { display: block; }
+  .mil-fiche.mil-dossier .mil-meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 15px;
+    padding: 0;
+    border-right: 0;
+  }
+  .mil-fiche.mil-dossier .mil-meta-item:first-child { padding-top: 11px; }
+  .mil-fiche.mil-dossier .mil-redactions { display: none; }
+  .mil-fiche.mil-dossier .mil-footer { align-self: center; margin: 10px 0; }
+  .mil-fiche.mil-dossier .mil-fields { margin-top: 20px; }
+}
