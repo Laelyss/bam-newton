@@ -1,117 +1,106 @@
 /* =========================================
-   FICHE MILITAIRE - NEWTON 
+   FICHE MILITAIRE - NEWTON (v2 compact)
    ========================================= */
 
-/* --- Conteneur principal --- */
 .mil-fiche {
-  background: #0d0d0d;
-  border: 1px solid #2a2a2a;
-  padding: 18px 20px;
-  color: #c8c8c8;
+  background: #111;
+  border: 1px solid #333;
+  padding: 14px 18px 16px;
+  color: #ccc;
   font-family: "Courier New", Courier, monospace;
-  font-size: 13px;
-  line-height: 1.45;
-  position: relative;
+  font-size: 12.5px;
+  line-height: 1.35;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-/* --- En-tête CONFIDENTIEL --- */
+/* Header */
 .mil-header {
   text-align: center;
-  color: #c45c5c;
-  border: 1px solid #c45c5c;
-  display: inline-block;
-  padding: 3px 16px;
-  margin: 0 auto 14px;
-  letter-spacing: 2px;
-  font-size: 11px;
+  color: #d45a5a;
+  border: 1px solid #d45a5a;
+  display: table;
+  margin: 0 auto 12px;
+  padding: 2px 14px;
+  letter-spacing: 1.5px;
+  font-size: 10px;
   font-weight: bold;
 }
 
-/* --- Ligne meta (matricule / affectation / statut) --- */
+/* Meta line */
 .mil-meta {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #333;
-  padding-bottom: 10px;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2a2a2a;
 }
-.mil-meta-item {
-  flex: 1;
-  text-align: center;
-}
+.mil-meta-item { flex: 1; text-align: center; }
 .mil-meta-label {
   display: block;
-  font-size: 10px;
-  color: #888;
-  letter-spacing: 1px;
-  margin-bottom: 4px;
+  font-size: 9px;
+  color: #777;
+  letter-spacing: 0.8px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
 }
-.mil-meta-value {
-  font-size: 13px;
-  color: #ddd;
-}
-.mil-status {
-  color: #c45c5c;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
+.mil-meta-value { font-size: 12px; color: #ddd; }
+.mil-status { color: #d45a5a; font-weight: bold; }
 .mil-bar {
   display: inline-block;
-  width: 80px;
-  height: 12px;
+  width: 70px;
+  height: 10px;
   background: #444;
   vertical-align: middle;
 }
 
-/* --- Champs d'identité --- */
-.mil-field {
-  margin-bottom: 12px;
-}
+/* Fields */
+.mil-field { margin-bottom: 8px; }
 .mil-label {
-  color: #a0a0a0;
-  font-size: 11px;
-  letter-spacing: 1px;
-  margin-bottom: 3px;
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  margin-bottom: 1px;
   text-transform: uppercase;
 }
 .mil-value {
-  color: #d0d0d0;
-  padding-bottom: 4px;
-  border-bottom: 1px dotted #444;
-  min-height: 18px;
+  color: #d8d8d8;
+  padding-bottom: 2px;
+  border-bottom: 1px dotted #555;
+  min-height: 16px;
 }
 
-/* Version inline (label + valeur sur la même ligne) */
+/* Inline fields (label left, value right) */
 .mil-inline {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
-  gap: 12px;
+  gap: 10px;
 }
 .mil-inline .mil-label {
   margin-bottom: 0;
-  flex-shrink: 0;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 .mil-inline .mil-value {
   flex: 1;
   text-align: right;
-  border-bottom: 1px dotted #444;
+  border-bottom: 1px dotted #555;
 }
 
-/* --- Pied de fiche --- */
+/* Footer */
 .mil-footer {
   text-align: center;
-  margin-top: 18px;
-  font-size: 11px;
-  color: #888;
+  margin-top: 14px;
+  font-size: 10px;
+  color: #777;
   letter-spacing: 1px;
 }
 .mil-ref-box {
   display: inline-block;
-  width: 50px;
-  height: 14px;
+  width: 42px;
+  height: 12px;
   background: #555;
   vertical-align: middle;
-  margin: 0 4px;
+  margin: 0 3px;
 }
